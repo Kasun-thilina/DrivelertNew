@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   >
+
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:src="@drawable/l"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/login_et_username"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:background="@drawable/edit_text_background"
+        android:hint="@string/username_email"
+        android:inputType="text"
+        android:maxLines="1"
+        android:paddingStart="15dp"
+        android:paddingLeft="15dp"
+        android:paddingTop="3dp"
+        android:paddingEnd="15dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="3dp"
+        android:singleLine="true"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo" />
+
+    <EditText
+        android:id="@+id/login_et_password"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:background="@drawable/edit_text_background"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:maxLines="1"
+        android:paddingStart="15dp"
+        android:paddingLeft="15dp"
+        android:paddingTop="3dp"
+        android:paddingEnd="15dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="3dp"
+        android:singleLine="true"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_et_username" />
+
+    <Button
+        android:id="@+id/login_btn_login"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginLeft="64dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginRight="64dp"
+        android:background="@drawable/button_selector"
+        android:text="@string/signin"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_et_password" />
+
+    <TextView
+        android:id="@+id/login_tv_newuser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/new_user"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/login_btn_login"
+        app:layout_constraintTop_toBottomOf="@+id/login_btn_login" />
+
+    <TextView
+        android:id="@+id/login_tv_signup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:text="@string/signup"
+        android:textColor="@color/bg_tab_text_color"
+        android:textSize="12sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/login_tv_newuser"
+        app:layout_constraintStart_toEndOf="@+id/login_tv_newuser" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,95 @@
+<resources>
+    <string name="app_name">Drivelert</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="ok">OK</string>
+    <string name="permission_camera_rationale">Access to the camera is needed for detection</string>
+    <string name="no_camera_permission">This application cannot run because it does not have the camera permission. The application will now exit.</string>
+    <string name="low_storage_error">Face detector dependencies cannot be downloaded due to low device storage</string>
+
+
+    <string name="action_settings">Settings</string>
+    <string name="end">END</string>
+    <string name="status">STATUS:</string>
+    <string name="alarm_will_invoke_after">Alarm will invoke after:</string>
+    <string name="high">High</string>
+    <string name="medium_recommended">Medium(Recommended)</string>
+    <string name="low">Low</string>
+    <string name="time_senstivity">Time Senstivity</string>
+
+
+    <string name="signin">SignIn</string>
+    <string name="signup">SignUp</string>
+    <string name="username">Username</string>
+    <string name="username_email">Username/Email</string>
+    <string name="password">Password</string>
+    <string name="retype_password">Retype Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="email">Email</string>
+    <string name="forget">Forget Password ?</string>
+    <string name="submit">Submit</string>
+    <string name="new_user">No account yet? </string>
+    <string name="already_account">Already have account?</string>
+    <string name="forget_tv">After submitting you will shortly receive details on your email address.</string>
+    <string name="username_validity_msg">Invalid username/email or password.</string>
+    <string name="contains_special_char">User name should not contain special character.</string>
+    <string name="username_size">Username is not between 4 to 16 characters or field is empty.</string>
+    <string name="invalid_email">Invalid email address or field is empty.</string>
+    <string name="password_not_match">Password not matched.</string>
+    <string name="password_size">Password Must be greater then 4 characters.</string>
+    <string name="internet_prob">Internet connectivity problem.</string>
+    <string name="sign_in">Sign in</string>
+    <string name="logout">Logout</string>
+
+    <string name="speed_gps">Speed Gps</string>
+
+    <!--**************Emergency Mode****************************-->
+    <string name="message_write_error">Error Writing Message !</string>
+    <string name="message_write_success">Successfully written to Tag !</string>
+    <string name="message_write_progress">Writing to Tag..</string>
+    <string name="message_tag_detected">NFC Tag Detected !</string>
+    <string name="message_nfc_holder_detected">NFC Phone Holder Identified</string>
+    <string name="message_nfc_holder_detached">NFC Phone Holder Detached</string>
+    <string name="message_nfc_holder_error">Error!Invalid NFC Tag Detected</string>
+    <string name="message_read_tag">Read from NFC Tag</string>
+    <string name="message_write_tag">Write to NFC Tag</string>
+    <string name="message_tap_tag">Tap the NFC Tag to your device !</string>
+    <string name="hint_message">Message</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Strings related to Settings -->
+    <string name="key_dialNo">key_dialNo</string>
+    <string name="key_smsMessage">key_smsMessage</string>
+    <string name="title_dialNo">Emergency Contact Number</string>
+    <string name="title_name">Emergency SMS Message</string>
+    <string name="developer_linkedIN"></string>
+    <string name="summary_version">3.0</string>
+
+    <!--CHANGABLE VALUES-->
+    <string name="default_sms">Im in an emergency</string>
+    <string name="default_dialNo">123</string>
+
+    <!-- Strings related to GPS -->
+    <string name="msg_driving">Driving Mode Activated</string>
+    <string name="msg_notDriving">Not Driving</string>
+    <string name="errorMsg_GPSDisabled">Location Service is disabled on your Device.Please enable GPS to continue</string>
+    <string name="errorMsg_NFCDisabled">NFC Scanning is disabled on your Device.Please enable NFC to continue</string>
+    <string name="errorMsg_NFCDNotFound">NFC is not available on your device</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+
+</resources>
