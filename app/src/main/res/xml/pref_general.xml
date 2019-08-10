@@ -1,30 +1,41 @@
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
-    <PreferenceCategory android:title="General Settings">
+<androidx.preference.PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory app:title="General Settings">
         <EditTextPreference
-            android:defaultValue="@string/default_dialNo"
-            android:key='@string/key_dialNo'
-            android:summary="@string/default_dialNo"
-            android:title='@string/title_dialNo'
+            app:defaultValue="@string/default_dialNo"
+            app:key='@string/key_dialNo'
+            app:summary="@string/default_dialNo"
+            app:title='@string/title_dialNo'
             />
         <EditTextPreference
-            android:defaultValue="@string/default_sms"
-            android:key='@string/key_smsMessage'
-            android:summary='@string/default_sms'
-            android:title="@string/title_name"
+            app:defaultValue="@string/default_sms"
+            app:key='@string/key_smsMessage'
+            app:summary='@string/default_sms'
+            app:title="@string/title_name"
             />
         <Preference
-            android:summary="0:00"
-            android:key="key_driveTime"
-            android:title="Driving Time(Minutes:Seconds)"
+            app:summary="0:00"
+            app:key="key_driveTime"
+            app:title="Driving Time(Minutes:Seconds)"
             />
         <SwitchPreference
-            android:key="pref_nfc"
-            android:title="Use NFC"
-            android:defaultValue="false" />
+            app:key="pref_nfc"
+            app:title="Use NFC"
+            app:defaultValue="false" />
         <SwitchPreference
-            android:key="pref_speed"
-            android:title="Show Driving Speed"
-            android:defaultValue="false" />
+            app:key="pref_speed"
+            app:title="Show Driving Speed"
+            app:defaultValue="false" />
+
     </PreferenceCategory>
 
-</PreferenceScreen>
+    <PreferenceCategory app:title="About">
+
+        <Preference
+            app:summary="@string/summary_version"
+            app:title="Version"
+            />
+
+    </PreferenceCategory>
+
+</androidx.preference.PreferenceScreen>

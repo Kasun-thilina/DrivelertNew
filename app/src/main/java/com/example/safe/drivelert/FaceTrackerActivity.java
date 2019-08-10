@@ -174,12 +174,11 @@ public final class FaceTrackerActivity extends AppCompatActivity implements Loca
         super.onCreate(icicle);
         setContentView(R.layout.main);
 
-        prevInit();
+      //  prevInit();
         init();
         getLastLocationNewMethod();
         reqPermission();
         initNFC();
-        PreferenceManager.setDefaultValues(this, R.xml.pref_general, false);
         /**
          * GPS
          */
@@ -223,7 +222,7 @@ public final class FaceTrackerActivity extends AppCompatActivity implements Loca
                     @Override
                     public void onSuccess(Location location) {
 
-                            Log.v("LOCATION DATA" , "data");
+                        Log.v("LOCATION DATA" , "data");
                     }
 
                 });
@@ -500,7 +499,7 @@ public final class FaceTrackerActivity extends AppCompatActivity implements Loca
     @Override
     protected void onPause() {
         super.onPause();
-        mPreview.stop();
+//        mPreview.stop();
 
         //----------------Emergency Mode---------------
         mLocationManager.removeUpdates(this);
@@ -911,14 +910,12 @@ public final class FaceTrackerActivity extends AppCompatActivity implements Loca
     private void initNFC(){
         mNfcAdapter = NfcAdapter.getDefaultAdapter(this);
     }
-    /**
-     * Detecting NFC tag and returning to the home screen at any time
-     */
     @Override
     protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
         Tag tag = intent.getParcelableExtra(NfcAdapter.EXTRA_TAG);
-        Log.d(TAG, "onNewIntent: "+intent.getAction());
-        if(tag != null) {
+        Log.d(TAG, "onNewIntent: " + intent.getAction());
+        if (tag != null) {
             Toast.makeText(this, getString(R.string.message_tag_detected), Toast.LENGTH_SHORT).show();
             final Ndef ndef = Ndef.get(tag);
             onNfcDetected(ndef);
@@ -1150,7 +1147,7 @@ public final class FaceTrackerActivity extends AppCompatActivity implements Loca
     /**This Method set the GPS Scanner animation and NFC detected , Navigation Mode icons*/
     private void uiTransitions(boolean isfound){
         try {
-            //txtSearching = findViewById(R.id.txtScanningForNFC);
+            txtSearching = findViewById(R.id.txtScanningForNFC);
             Animation anim = new AlphaAnimation(0.0f, 1.0f);
             anim.setDuration(50); //You can manage the time of the blink with this parameter
             anim.setStartOffset(800);
@@ -1158,7 +1155,7 @@ public final class FaceTrackerActivity extends AppCompatActivity implements Loca
             anim.setRepeatCount(Animation.INFINITE);
             txtSearching.startAnimation(anim);
             //gifScanning = findViewById(R.id.gifScanner);
-           // nfcIcon = findViewById(R.id.activeNFC);
+            // nfcIcon = findViewById(R.id.activeNFC);
             gpsIcon = findViewById(R.id.imgNavigation);
             RSPIcon = findViewById(R.id.imgRSPConnected);
             if (isfound) {

@@ -11,8 +11,9 @@
             android:title="Help"
             android:icon="@drawable/ic_action_help" />
         <item
-            android:id="@+id/settings"
-            android:title="Settings"/>
+            android:id="@+id/nav_settings"
+            android:title="Settings" />
+
     </group>
 
     <item android:title="Communicate">

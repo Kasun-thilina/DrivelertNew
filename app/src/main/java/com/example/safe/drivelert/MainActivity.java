@@ -159,13 +159,13 @@ public class MainActivity extends FragmentActivity
             Intent hp = new Intent(MainActivity.this,help.class);
             startActivity(hp);
         }
-        else if (id == R.id.nav_send) {
+      else if (id == R.id.nav_send) {
 
             getSupportFragmentManager().beginTransaction().replace(R.id.frame,new contactus()).commit();
         }
-        else if (id == R.id.settings) {
+        else if (id == R.id.nav_settings) {
 
-            getSupportFragmentManager().beginTransaction().replace(R.id.frame,new contactus()).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.frame,new SettingsActivity.SettingsFragment()).commit();
         }
 
         if (id == R.id.nav_logout) {
