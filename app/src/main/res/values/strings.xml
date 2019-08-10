@@ -125,6 +125,9 @@
 
     <string name="default_dialNo">123</string>
     <string name="txt_scanningMessgage">Searching for Vehicle</string>
+    <string name="txt_NFC_Connected">Attached to NFC TAG</string>
+    <string name="txt_ConnectedToVehicle">Connected to The Vehicle</string>
+    <string name="txt_SearchingAll">Searching For NFC / Vehicle</string>
 
     <!-- Strings related to GPS -->
 

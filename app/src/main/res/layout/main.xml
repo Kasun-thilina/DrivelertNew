@@ -125,7 +125,37 @@
             android:textColor="@android:color/black"
             tools:visibility="visible" />
         <TextView
+            android:id="@+id/txtSpeed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="28sp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/valSpeed"
+            android:layout_below="@id/labelMaxSpeed"
+            android:layout_centerHorizontal="true"/>
+        <TextView
+            android:id="@+id/valSpeed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textAlignment="center"
+            android:textSize="28sp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/labelMaxSpeed"
+            android:layout_centerHorizontal="true"/>
+        <TextView
             android:id="@+id/txtScanningForNFC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Not Driving"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            android:layout_marginTop="50dp"
+            android:layout_below="@id/labelMaxSpeed"
+            android:layout_centerHorizontal="true"/>
+        <TextView
+            android:id="@+id/txtDriving"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/txt_scanningMessgage"
@@ -139,7 +169,7 @@
             android:id="@+id/imgRSPConnected"
             android:src="@drawable/wifilogo"
             android:layout_width="140dp"
-            android:visibility="visible"
+            android:visibility="invisible"
             android:layout_height="wrap_content"
             android:layout_below="@id/labelMaxSpeed"
             android:layout_marginBottom="60dp"
@@ -151,7 +181,7 @@
             android:id="@+id/imgNavigation"
             android:src="@drawable/navigationlogo"
             android:layout_width="110dp"
-            android:visibility="invisible"
+            android:visibility="visible"
             android:layout_height="wrap_content"
             android:layout_below="@id/labelMaxSpeed"
             android:layout_marginBottom="50dp"
@@ -159,6 +189,17 @@
             android:layout_marginStart="140dp"
             android:layout_marginLeft="48dp"
             android:rotation="315"
+            />
+        <ImageView
+            android:id="@+id/imgNFC"
+            android:src="@drawable/nfc_logo"
+            android:layout_width="110dp"
+            android:visibility="invisible"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/labelMaxSpeed"
+            android:layout_marginBottom="60dp"
+            android:layout_marginTop="150dp"
+            android:layout_marginStart="258dp"
             />
 
 

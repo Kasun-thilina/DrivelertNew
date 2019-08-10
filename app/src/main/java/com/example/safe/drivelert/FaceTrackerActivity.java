@@ -136,8 +136,8 @@ public final class FaceTrackerActivity extends AppCompatActivity implements Loca
     private ImageView nfcIcon,RSPIcon;
     private ImageView gpsIcon;
     TextView txtSearching,txtSpeed;
-    /**URL For Raspberry PI Should go here*/
-    final URL APIURL=new URL(" https://demo7381782.mockable.io/");
+    /**URL For Raspberry PI /Sensor Should go here*/
+    final URL APIURL=new URL(" https://safedrive.free.beeceptor.com");
     final URL SENSORURL=new URL(" https://demo7381782.mockable.io/");
     /**
      * For GPS
@@ -174,7 +174,7 @@ public final class FaceTrackerActivity extends AppCompatActivity implements Loca
         super.onCreate(icicle);
         setContentView(R.layout.main);
 
-      //  prevInit();
+        prevInit();
         init();
         getLastLocationNewMethod();
         reqPermission();
@@ -499,7 +499,7 @@ public final class FaceTrackerActivity extends AppCompatActivity implements Loca
     @Override
     protected void onPause() {
         super.onPause();
-//        mPreview.stop();
+       mPreview.stop();
 
         //----------------Emergency Mode---------------
         mLocationManager.removeUpdates(this);
@@ -1023,9 +1023,9 @@ public final class FaceTrackerActivity extends AppCompatActivity implements Loca
     private void updateUI(){
         final AlertDialog.Builder dialogIsDriving = new AlertDialog.Builder(this);
         dialogIsDriving.setCancelable(true);
-        //txtSpeed=findViewById(R.id.txtSpeed);
-        //drivingMode=findViewById(R.id.txtDriving);
-        //currentSpeed = findViewById(R.id.valSpeed);
+        txtSpeed=findViewById(R.id.txtSpeed);
+        drivingMode=findViewById(R.id.txtDriving);
+        currentSpeed = findViewById(R.id.valSpeed);
 
         new Thread(new Runnable() {
             @Override
@@ -1063,11 +1063,6 @@ public final class FaceTrackerActivity extends AppCompatActivity implements Loca
                 }
             }
         }).start();
-
-
-
-
-
         //drivingMode.setText(R.string.msg_notDriving);
        /* if (showSpeed) {
             drivingMode.setTextColor(Color.parseColor("#a5d6a7"));
@@ -1085,6 +1080,7 @@ public final class FaceTrackerActivity extends AppCompatActivity implements Loca
               /*  if (!(gifScanning.getVisibility()==View.VISIBLE)) {
                     gpsIcon.setVisibility(View.VISIBLE);
                 }*/
+
                 drivingMode.setText(R.string.msg_driving);
                 drivingMode.setTextColor(Color.parseColor("#4caf50"));
                 isDriving = true;
@@ -1095,7 +1091,7 @@ public final class FaceTrackerActivity extends AppCompatActivity implements Loca
                 drivingMode.setTextColor(Color.parseColor("#a5d6a7"));
                 gpsIcon.setVisibility(View.INVISIBLE);
                 isDriving=false;
-
+                gpsIcon.setVisibility(View.INVISIBLE);
                 dialogIsDriving.setMessage("Are You Still Driving?");
                 dialogIsDriving.setPositiveButton(
                         "Yes",
@@ -1155,16 +1151,16 @@ public final class FaceTrackerActivity extends AppCompatActivity implements Loca
             anim.setRepeatCount(Animation.INFINITE);
             txtSearching.startAnimation(anim);
             //gifScanning = findViewById(R.id.gifScanner);
-            // nfcIcon = findViewById(R.id.activeNFC);
+             nfcIcon = findViewById(R.id.imgNFC);
             gpsIcon = findViewById(R.id.imgNavigation);
             RSPIcon = findViewById(R.id.imgRSPConnected);
             if (isfound) {
                 //gifScanning.setVisibility(View.INVISIBLE);
                 if (useNFC) {
-                    //nfcIcon.setVisibility(View.VISIBLE);
-                    //txtSearching.setText("Attached to NFC Holder");
+                    nfcIcon.setVisibility(View.VISIBLE);
+                    txtSearching.setText(R.string.txt_NFC_Connected);
                 } else {
-                    txtSearching.setText("Connected to Raspberry PI");
+                    txtSearching.setText(R.string.txt_ConnectedToVehicle);
                     if (isConnected) {
                         RSPIcon.setVisibility(View.VISIBLE);
                     } else {
@@ -1179,14 +1175,14 @@ public final class FaceTrackerActivity extends AppCompatActivity implements Loca
                 }
             } else {
                 if (useNFC) {
-                    //txtSearching.setText("Searching For NFC Holder");
+                    txtSearching.setText(R.string.txt_SearchingAll);
                 } else {
-                    txtSearching.setText("Searching For Raspberry PI");
+                    txtSearching.setText(R.string.txt_scanningMessgage);
                     RSPIcon.setVisibility(View.INVISIBLE);
                 }
 
                 //gifScanning.setVisibility(View.VISIBLE);
-                //nfcIcon.setVisibility(View.INVISIBLE);
+                nfcIcon.setVisibility(View.INVISIBLE);
                 gpsIcon.setVisibility(View.INVISIBLE);
             }
         }
