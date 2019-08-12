@@ -151,7 +151,7 @@
             android:text="Not Driving"
             android:textAlignment="center"
             android:textSize="30sp"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="10dp"
             android:layout_below="@id/labelMaxSpeed"
             android:layout_centerHorizontal="true"/>
         <TextView
@@ -162,18 +162,18 @@
             android:textAlignment="center"
             android:textColor="#2196f3"
             android:textSize="20sp"
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="50dp"
             android:layout_below="@id/labelMaxSpeed"
             android:layout_centerHorizontal="true"/>
         <ImageView
             android:id="@+id/imgRSPConnected"
             android:src="@drawable/wifilogo"
             android:layout_width="140dp"
-            android:visibility="invisible"
+            android:visibility="visible"
             android:layout_height="wrap_content"
             android:layout_below="@id/labelMaxSpeed"
             android:layout_marginBottom="60dp"
-            android:layout_marginTop="150dp"
+            android:layout_marginTop="90dp"
             android:layout_marginStart="1dp"
             android:layout_marginLeft="48dp"
             />
@@ -185,7 +185,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/labelMaxSpeed"
             android:layout_marginBottom="50dp"
-            android:layout_marginTop="150dp"
+            android:layout_marginTop="100dp"
             android:layout_marginStart="140dp"
             android:layout_marginLeft="48dp"
             android:rotation="315"
@@ -194,11 +194,11 @@
             android:id="@+id/imgNFC"
             android:src="@drawable/nfc_logo"
             android:layout_width="110dp"
-            android:visibility="invisible"
+            android:visibility="visible"
             android:layout_height="wrap_content"
             android:layout_below="@id/labelMaxSpeed"
             android:layout_marginBottom="60dp"
-            android:layout_marginTop="150dp"
+            android:layout_marginTop="90dp"
             android:layout_marginStart="258dp"
             />
 

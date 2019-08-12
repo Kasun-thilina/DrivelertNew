@@ -1074,7 +1074,7 @@ public final class FaceTrackerActivity extends AppCompatActivity implements Loca
             SpannableString speedValue=  new SpannableString(valSpeed);
             SpannableString speedText=  new SpannableString(strSpeed);
             speedText.setSpan(new RelativeSizeSpan(1.35f), 0,5, 0); // set size
-            if (speed > 1) {
+            if (speed > 10) {
                 speedValue.setSpan(new ForegroundColorSpan(Color.parseColor("#00bfa5")),0,6,0);// set color
                 //txtSpeed.setText();
               /*  if (!(gifScanning.getVisibility()==View.VISIBLE)) {
@@ -1156,7 +1156,7 @@ public final class FaceTrackerActivity extends AppCompatActivity implements Loca
             RSPIcon = findViewById(R.id.imgRSPConnected);
             if (isfound) {
                 //gifScanning.setVisibility(View.INVISIBLE);
-                if (useNFC) {
+                if (useNFC & isCorrect) {
                     nfcIcon.setVisibility(View.VISIBLE);
                     txtSearching.setText(R.string.txt_NFC_Connected);
                 } else {
