@@ -233,7 +233,7 @@ public final class FaceTrackerActivity extends AppCompatActivity implements Loca
         mPreview = (CameraSourcePreview) findViewById(R.id.preview);
         mGraphicOverlay = (GraphicOverlay) findViewById(R.id.faceOverlay);
         end_button = (Button) findViewById(R.id.button);
-        layout = (LinearLayout) findViewById(R.id.topLayout);
+        //layout = (LinearLayout) findViewById(R.id.topLayout);
         n_mode = (ToggleButton) findViewById(R.id.toggleButton);
         n_mode.setTextOn("N-Mode ON");
         n_mode.setText("N-Mode");
