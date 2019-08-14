@@ -6,7 +6,7 @@
     <com.example.safe.drivelert.ui.camera.CameraSourcePreview
         android:id="@+id/preview"
         android:layout_width="900px"
-        android:layout_height="1000px"
+        android:layout_height="900px"
         android:layout_centerHorizontal="true"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="10dp">
